@@ -3,8 +3,8 @@
 This repository contains the  **benchmark** for **HouseTS**, a large-scale multimodal spatiotemporal dataset for long-horizon housing-market forecasting at the U.S. ZIP-code level.
 
 HouseTS aligns multiple modalities under a unified ZIP-month panel, including:
-- **Monthly housing-market indicators** (target: `price`)
-- **Monthly POI counts** (category-level counts)
+- **Monthly housing-market indicators**
+- **Monthly POI counts**
 - **Annual census / socioeconomic variables** aligned to the monthly timeline
 - (Dataset also includes auxiliary modalities such as aerial imagery + derived annotations; see Kaggle for full contents.)
 
@@ -14,7 +14,11 @@ The benchmark supports **univariate** and **multivariate** forecasting with stan
 
 ## Dataset
 
-HouseTS is hosted on Kaggle:
+HouseTS data (tabular signals) is available via Google Drive:
+
+- Google Drive download: https://drive.google.com/file/d/1OC_PTXfaGuQ50-mu2LkfQRLdhjPUbyu7/view?usp=sharing
+
+HouseTS aerial imagery data is hosted on Kaggle:
 
 - Kaggle dataset page: https://www.kaggle.com/datasets/shengkunwang/housets-dataset
 
