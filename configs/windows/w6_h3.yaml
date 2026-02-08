@@ -1,0 +1,5 @@
+window:
+  name: w6_h3
+  seq_len: 6
+  label_len: 3
+  pred_len: 3

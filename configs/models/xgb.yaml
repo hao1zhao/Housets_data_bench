@@ -1,0 +1,19 @@
+model:
+  name: xgb
+  hparams:
+    n_estimators: 500
+    max_depth: 6
+    learning_rate: 0.05
+    subsample: 0.9
+    colsample_bytree: 0.9
+    reg_lambda: 1.0
+    random_state: 0
+    max_train_samples: 20000
+
+transforms:
+  zscore:
+    enabled: true
+    scope: global
+  pca:
+    enabled: true
+    n_components: 16

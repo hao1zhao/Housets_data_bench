@@ -1,0 +1,8 @@
+model:
+  name: chronos2_zero
+  hparams:
+    model_id: amazon/chronos-2
+    infer_batch_size: 128
+    point: median
+    cross_learning: false 
+    context_length: null

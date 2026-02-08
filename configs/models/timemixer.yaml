@@ -1,0 +1,14 @@
+model:
+  name: timemixer
+  hparams:
+    d_model: 64
+    d_ff: 256
+    n_blocks: 2
+    scales: "1,2,4"
+    kernel_size: 3
+    epochs: 20
+    lr: 1.0e-3
+    weight_decay: 0.0
+    grad_clip: 1.0
+    patience: 5
+    max_train_batches: null

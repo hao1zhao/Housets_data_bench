@@ -1,0 +1,18 @@
+model:
+  name: var_ms
+  hparams:
+    # VAR order
+    p: 1
+
+    # ridge for stability
+    ridge: 1.0e-6
+
+    stabilize: true
+    max_spectral_radius: 0.98
+    use_pca: false
+    pca_n_components: 16
+    pca_whiten: false
+    pca_exclude_target: true
+transforms:
+  pca:
+    enabled: false

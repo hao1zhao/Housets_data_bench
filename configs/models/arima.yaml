@@ -1,0 +1,12 @@
+model:
+  name: arima
+  hparams:
+    ridge: 1.0e-3
+
+transforms:
+  zscore:
+    enabled: true
+    scope: global
+  pca:
+    enabled: true
+    n_components: 16

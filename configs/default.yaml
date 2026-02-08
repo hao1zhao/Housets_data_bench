@@ -1,0 +1,64 @@
+data:
+  path: data/raw/HouseTS.csv
+  target_col: price
+  impute: true
+  n_zip: 0   # 0 => use all ZIPs
+
+split:
+  train_ratio: 0.7
+  val_ratio: 0.1
+
+window:
+  name: w6_h3
+  seq_len: 6
+  label_len: 3
+  pred_len: 3
+
+task:
+  name: multivariate
+  features_mode: MS
+
+dataloader:
+  batch_size: 64
+  num_workers: 0
+  pad_to: 0  
+
+transforms:
+  order: [log, clip, zscore, pca]
+
+  log:
+    enabled: true
+    mode: log1p
+    apply_to:
+      target: true
+      continuous_features: true
+
+  clip:
+    enabled: false
+    method: quantile
+    apply_to:
+      target: false
+      continuous_features: true
+    quantile:
+      lower: 0.001
+      upper: 0.999
+
+  zscore:
+    enabled: false
+    scope: global
+    eps: 1.0e-6
+    apply_to:
+      target: true
+      continuous_features: true
+
+  pca:
+    enabled: false
+    n_components: 16
+
+model:
+  name: repeat
+  hparams: {}
+
+run:
+  device: cuda
+  max_eval_batches: 0 

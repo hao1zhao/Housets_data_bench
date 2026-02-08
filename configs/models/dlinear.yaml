@@ -1,0 +1,11 @@
+model:
+  name: dlinear
+  hparams:
+    kernel_size: 3
+    individual: true
+    epochs: 20
+    lr: 1.0e-3
+    weight_decay: 0.0
+    grad_clip: 1.0
+    patience: 5
+    max_train_batches: null

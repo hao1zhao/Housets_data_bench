@@ -1,0 +1,5 @@
+model:
+  name: ar_univariate
+  hparams:
+    p: 1       
+    ridge: 1.0e-6

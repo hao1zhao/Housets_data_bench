@@ -1,0 +1,10 @@
+model:
+  name: chronos_ft
+  hparams:
+    model_id: amazon/chronos-t5-small
+    infer_batch_size: 128
+    point: median
+    max_calib_batches: 200
+dataloader:
+  batch_size: 16
+  pad_to: 32

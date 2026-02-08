@@ -1,0 +1,10 @@
+model:
+  name: ardl
+  hparams:
+    alpha: 10.0
+    fit_intercept: true
+    max_train_samples: null
+    random_state: 0
+    use_pca: true
+    pca_n_components: 5
+    pca_whiten: false

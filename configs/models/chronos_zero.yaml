@@ -1,0 +1,9 @@
+model:
+  name: chronos_zero
+  hparams:
+    model_id: amazon/chronos-t5-small
+    infer_batch_size: 128
+    point: median
+dataloader:
+  batch_size: 16
+  pad_to: 32

@@ -1,0 +1,8 @@
+model:
+  name: timesfm_xreg_zero
+  hparams:
+    repo_id: google/timesfm-1.0-200m-pytorch
+    infer_batch_size: 64
+
+dataloader:
+  pad_to: 32

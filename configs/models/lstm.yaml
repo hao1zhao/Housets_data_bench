@@ -1,0 +1,13 @@
+model:
+  name: lstm
+  hparams:
+    epochs: 20
+    lr: 0.001
+    weight_decay: 0.0
+    grad_clip: 1.0
+    patience: 5
+    max_train_batches: null
+
+    hidden_size: 256
+    num_layers: 2
+    dropout: 0.1

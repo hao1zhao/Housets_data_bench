@@ -1,0 +1,7 @@
+model:
+  name: var
+  hparams:
+    p: 1
+    ridge: 1.0e-6
+    stabilize: true
+    max_spectral_radius: 0.98
