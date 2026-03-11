@@ -66,3 +66,99 @@ python scripts/run_one.py \
   --model dlinear \
   --data data/raw/HouseTS.csv \
   --device gpu
+```
+### 2) Run a univariate baseline
+
+```bash
+python scripts/run_one.py \
+  --task univariate \
+  --window w12_h6 \
+  --model ar_univariate \
+  --data data/raw/HouseTS.csv \
+  --device cpu
+```
+
+---
+
+## Window Presets
+
+The repository currently provides the following window presets:
+
+- `w6_h3`
+- `w6_h6`
+- `w6_h12`
+- `w12_h3`
+- `w12_h6`
+- `w12_h12`
+
+For example:
+
+- `w6_h3`: `seq_len=6`, `label_len=3`, `pred_len=3`
+- `w12_h6`: `seq_len=12`, `label_len=6`, `pred_len=6`
+
+---
+
+## Supported Model Configs
+
+The current `configs/models/` directory includes the following model configs.
+
+### Statistical baselines
+
+- `ar_univariate`
+- `ardl`
+- `arima`
+- `var`
+- `var_ms`
+
+### Classical machine learning
+
+- `rf`
+- `xgb`
+
+### Deep learning
+
+- `rnn`
+- `lstm`
+- `dlinear`
+- `timemixer`
+- `patchtst`
+- `informer`
+- `autoformer`
+- `fedformer`
+
+### Foundation-model variants
+
+- `chronos2_zero`
+- `chronos2_ft`
+- `timesfm_xreg_zero`
+- `timesfm_xreg_ft`
+
+---
+
+## Data Usage and Attribution
+
+HouseTS integrates or aligns signals derived from several public data sources, including:
+
+- housing-market time series
+- OpenStreetMap-derived POI statistics
+- U.S. Census / ACS socioeconomic variables
+- USDA NAIP aerial imagery
+
+Please review the paper and the upstream data-source licensing / attribution requirements before redistribution, publication of derivatives, or commercial use.
+
+---
+
+## Citation
+
+If you use HouseTS or this benchmark code in your research, please cite:
+
+```bibtex
+@article{wang2025housets,
+  title={HouseTS: A Large-Scale, Multimodal Spatiotemporal U.S. Housing Dataset and Benchmark},
+  author={Wang, Shengkun and Sun, Yanshen and Chen, Fanglan and Wang, Linhan and Ramakrishnan, Naren and Lu, Chang-Tien and Chen, Yinlin},
+  journal={arXiv preprint arXiv:2506.00765},
+  year={2025}
+}
+```
+
+---
